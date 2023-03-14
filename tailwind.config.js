@@ -6,20 +6,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body:['Public Sans']
+        body:['Space Mono']
       },
       colors: {
         primary: {
-          'Dark-Blue': 'hsl(233 26% 24%)',
-          'Lime-Green': 'hsl(136 65% 51%)',
-          'Bright-cyan': 'hsl(192 70% 51%)',
-          'Grayish-Blue': 'hsl(233, 8%, 62%)',
-          'Light-Grayish-Blue': 'hsl(220, 16%, 96%)',
-          'Very-Light-Gray': 'hsl(0, 0%, 98%)',
           White: 'hsl(0, 0%, 100%)',
-        },
-        secondary:{
-          'orange-w': 'hsl(233 23% 16%)'
+          'Strong-cyan': 'hsl(172, 67%, 45%)',
+          'Very-dark-cyan': 'hsl(183, 100%, 15%)',
+          'Dark-grayish-cyan': 'hsl(186, 14%, 43%)',
+          'Grayish-cyan': 'hsl(184, 14%, 56%)',
+          'Light-grayish-cyan': 'hsl(185, 41%, 84%)',
+          'Very-light-grayish-cyan': 'hsl(189, 41%, 97%)',
         },
       },
     },
