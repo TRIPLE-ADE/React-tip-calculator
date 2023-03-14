@@ -1,10 +1,18 @@
+import Header from "./components/Header";
 
 function App() {
   return (
-   <div className="bg-black p-10 font-body">
-    <p className="font-bold text-center text-white">ggggg</p>
-   </div>
-     
+    <div className="bg-primary-Light-grayish-cyan">
+      <Header/>
+      <main>
+        <section>
+
+        </section>
+        <section>
+
+        </section>
+      </main>
+    </div>
   )
 }
 
