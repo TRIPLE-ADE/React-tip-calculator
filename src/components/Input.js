@@ -2,9 +2,9 @@ import React from 'react'
 
 function Input({name}) {
   return (
-    <div>
-        <label className="block">{name}</label>
-        <input type="number" placeholder="0"/>
+    <div className='grid gap-2'>
+        <label>{name}</label>
+        <input type="number" placeholder="0" className='text-right'/>
     </div>
   )
 }
