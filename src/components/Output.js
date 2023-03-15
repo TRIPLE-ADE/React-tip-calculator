@@ -7,7 +7,7 @@ function Output({label, amount}) {
             <p>{label}</p>
             <p>/Person</p>
         </div>
-        <p>{amount}</p>
+        <p>{"$"+amount}</p>
     </div>
   )
 }
