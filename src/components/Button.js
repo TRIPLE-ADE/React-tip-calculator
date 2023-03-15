@@ -1,10 +1,13 @@
 import React from "react";
 
 export function TipButton({percentValue}) {
-  <button
-    type="button"
-    className="px-3 py-2 text-white bg-Very-dark-cyan hover:bg-Strong-cyan"
-  >
-    {percentValue}
-  </button>;
+    return (
+      <button
+        type="button"
+        className="block text-white py-2 bg-primary-Very-dark-cyan hover:bg-primary-Strong-cyan rounded-md"
+      >
+        {percentValue}%
+      </button>
+    );
+ 
 }
