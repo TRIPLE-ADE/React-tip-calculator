@@ -24,7 +24,7 @@ function Form() {
         </h3>
         <Input name="people" icon={PersonIcon} />
       </div>
-    </div>
+    </form>
   );
 }
 

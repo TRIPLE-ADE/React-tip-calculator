@@ -18,13 +18,14 @@ function Input({name, icon}) {
     <div className='grid gap-2'>
       <label className='text-primary-Dark-grayish-cyan text-sm font-bold'>{name}</label>
       <div className="relative">
-      <img src={icon} alt="" className="absolute top-3 left-3" />
-      <input
-        type="number"
-        name={name}
-        placeholder="0"
-        className="w-full block bg-primary-Very-light-grayish-cyan text-primary-Very-dark-cyan text-right text-lg font-bold py-2 px-3 rounded-md font-body focus:outline-none mt-2"
-      />
+        <img src={icon} alt="" className="absolute top-3 left-3" />
+        <input
+          type="number"
+          name={name}
+          placeholder="0"
+          className="w-full block bg-primary-Very-light-grayish-cyan text-primary-Very-dark-cyan text-right text-lg font-bold py-2 px-3 rounded-md font-body focus:outline-none mt-2"
+        />
+      </div>
     </div>
   );
 }
