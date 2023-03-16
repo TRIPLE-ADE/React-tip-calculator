@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="bg-primary-Light-grayish-cyan pb-44">
       <Header />
-      <main className="w-1/2 m-auto rounded-xl bg-primary-White grid gap-x-4 grid-cols-2 overflow-hidden p-6">
+      <main className="m-auto rounded-xl bg-primary-White grid gap-x-4 grid-cols-2 overflow-hidden">
         <section className="py-4">
           <Form />
         </section>

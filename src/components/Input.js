@@ -15,7 +15,9 @@ export function CustomInput() {
 
 function Input({name, icon}) {
   return (
-    <div className="relative">
+    <div className='grid gap-2'>
+      <label className='text-primary-Dark-grayish-cyan text-sm font-bold'>{name}</label>
+      <div className="relative">
       <img src={icon} alt="" className="absolute top-3 left-3" />
       <input
         type="number"

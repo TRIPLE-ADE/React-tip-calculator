@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 
 function Output({label, amount}) {
@@ -13,4 +13,4 @@ function Output({label, amount}) {
   );
 }
 
-export default Output
+export default Output;
