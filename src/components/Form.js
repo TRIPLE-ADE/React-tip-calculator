@@ -1,12 +1,15 @@
 import React from 'react'
 import Input from './Input'
 import { CustomInput } from './Input';
-import { TipButton } from './Button'
+import { TipButton } from './Button';
+import DollarIcon from '../images/icon-dollar.svg';
+import PersonIcon from '../images/icon-person.svg';
+
 
 function Form() {
   return (
     <form action="">
-      <Input name="Bill" />
+      <Input name="Bill" icon={DollarIcon}/>
       <div className="grid grid-cols-3 gap-4 my-8">
         <TipButton percentValue={5} />
         <TipButton percentValue={10} />
@@ -15,8 +18,13 @@ function Form() {
         <TipButton percentValue={50} />
         <CustomInput />
       </div>
-      <Input name="Number of People" />
-    </form>
+      <div>
+        <h3 className="font-body text-primary-Dark-grayish-cyan text-lg">
+          Number of People
+        </h3>
+        <Input name="people" icon={PersonIcon} />
+      </div>
+    </div>
   );
 }
 

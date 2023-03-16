@@ -7,20 +7,26 @@ export function CustomInput() {
       name="custom"
       min="0"
       placeholder="Custom"
-      className="block text-center placeholder:text-primary-Dark-grayish-cyan bg-primary-Very-light-grayish-cyan focus:outline-none"
+      className="block text-center font-bold placeholder:text-primary-Dark-grayish-cyan bg-primary-Very-light-grayish-cyan focus:outline-none"
     />
   );
 }
 
-function Input({name}) {
+
+function Input({name, icon}) {
   return (
     <div className='grid gap-2'>
       <label className='text-primary-Dark-grayish-cyan text-sm font-bold'>{name}</label>
-      <div className='bg-primary-Very-light-grayish-cyan text-primary-Very-dark-cyan text-right text-lg font-bold py-2 px-3 rounded-md font-body'>
-        <input type="number" placeholder="0"  min="0" className='w-full text-right border-none focus:outline-none bg-transparent' />
-      </div>
+      <div className="relative">
+      <img src={icon} alt="" className="absolute top-3 left-3" />
+      <input
+        type="number"
+        name={name}
+        placeholder="0"
+        className="w-full block bg-primary-Very-light-grayish-cyan text-primary-Very-dark-cyan text-right text-lg font-bold py-2 px-3 rounded-md font-body focus:outline-none mt-2"
+      />
     </div>
-  )
+  );
 }
 
 export default Input

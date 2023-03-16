@@ -1,6 +1,7 @@
 import React from "react";
 
-function Output({ label, amount }) {
+
+function Output({label, amount}) {
   return (
     <div>
       <div>
