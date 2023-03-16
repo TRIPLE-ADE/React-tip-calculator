@@ -19,10 +19,7 @@ function Form() {
         <CustomInput />
       </div>
       <div>
-        <h3 className="font-body text-primary-Dark-grayish-cyan text-lg">
-          Number of People
-        </h3>
-        <Input name="people" icon={PersonIcon} />
+        <Input name="People" icon={PersonIcon} />
       </div>
     </form>
   );
