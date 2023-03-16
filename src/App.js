@@ -11,8 +11,8 @@ function App() {
           <Form/>
         </section>
         <section className="bg-primary-Very-dark-cyan p-7">
-          <Output label='Tip Amount' amount="0.00"/>
-          <Output label='Total' amount="0.00"/>
+          <Output label='Tip Amount' amount="$0.00"/>
+          <Output label='Total' amount="$0.00"/>
         </section>
       </main>
     </div>
