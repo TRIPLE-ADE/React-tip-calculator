@@ -7,7 +7,7 @@ function Form() {
   return (
     <form action="">
       <Input name="Bill" />
-      <div className="grid grid-cols-3 gap-4 mx-12">
+      <div className="grid grid-cols-3 gap-4 my-8">
         <TipButton percentValue={5} />
         <TipButton percentValue={10} />
         <TipButton percentValue={15} />

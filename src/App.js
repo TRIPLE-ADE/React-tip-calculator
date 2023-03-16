@@ -4,7 +4,7 @@ import Output from "./components/Output";
 
 function App() {
   return (
-    <div className="bg-primary-Light-grayish-cyan pb-44">
+    <div className="bg-primary-Light-grayish-cyan pb-44 font-body">
       <Header/>
       <main className=" w-3/5 m-auto rounded-xl bg-primary-White grid grid-cols-2 overflow-hidden">
         <section className="p-7">
