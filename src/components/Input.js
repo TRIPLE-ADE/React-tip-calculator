@@ -17,7 +17,7 @@ function Input({name, icon}) {
   return (
     <div className='grid gap-1'>
       <label className='text-primary-Dark-grayish-cyan text-sm font-bold'>{name}</label>
-      <div>
+      <div className='relative'>
         <img src={icon} alt="" className="absolute top-3 left-3" />
         <input
           type="number"
