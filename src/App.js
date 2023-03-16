@@ -11,7 +11,7 @@ function App() {
         <section className="p-7">
           <Form/>
         </section>
-        <section className="bg-primary-Very-dark-cyan p-7 m-7 rounded-xl">
+        <section className="bg-primary-Very-dark-cyan p-7 my-7 mr-7 rounded-xl">
           <Output label='Tip Amount' amount="$0.00"/>
           <Output label='Total' amount="$0.00"/>
           <ResetButton/>
