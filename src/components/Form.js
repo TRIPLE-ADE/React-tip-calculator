@@ -9,8 +9,9 @@ import PersonIcon from '../images/icon-person.svg';
 function Form() {
   return (
     <form action="">
-      <Input name="Bill" icon={DollarIcon}/>
-      <div className="grid grid-cols-3 gap-4 my-8">
+      <Input name="Bill" icon={DollarIcon} />
+      <h2 className="py-2 mt-4 text-primary-Dark-grayish-cyan font-bold">Select Tip %</h2>
+      <div className="grid grid-cols-3 gap-4 mb-10">
         <TipButton percentValue={5} />
         <TipButton percentValue={10} />
         <TipButton percentValue={15} />
