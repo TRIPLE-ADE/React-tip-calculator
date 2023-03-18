@@ -8,7 +8,7 @@ export function CustomInput() {
       min="0"
       max="50"
       placeholder="Custom"
-      className="block text-center font-bold placeholder:text-primary-Dark-grayish-cyan bg-primary-Very-light-grayish-cyan focus:outline-none"
+      className="block text-center font-bold placeholder:text-primary-Dark-grayish-cyan bg-primary-Very-light-grayish-cyan focus:outline-none rounded-md text-primary-Very-dark-cyan"
     />
   );
 }
