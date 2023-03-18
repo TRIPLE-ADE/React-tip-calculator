@@ -4,7 +4,7 @@ export function ResetButton(){
     return (
       <button
         type="submit"
-        className="block w-full text-center mt-20 text-lg tracking-wider font-bold py-2 text-primary-Very-dark-cyan bg-primary-Strong-cyan rounded-md"
+        className="block w-full text-center mt-5 md:mt-20 text-lg tracking-wider font-bold py-2 text-primary-Very-dark-cyan bg-primary-Strong-cyan rounded-md"
       >
         RESET
       </button>
