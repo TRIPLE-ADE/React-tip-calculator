@@ -1,12 +1,13 @@
 import React from 'react'
 
-export function CustomInput() {
+export function CustomInput({onChange, value}) {
   return (
     <input
       type="number"
       name="custom"
       min="0"
-      max="50"
+      value={value}
+      onChange={onChange}
       placeholder="Custom"
       className="block text-center font-bold placeholder:text-primary-Dark-grayish-cyan bg-primary-Very-light-grayish-cyan focus:outline-none rounded-md text-primary-Very-dark-cyan"
     />
@@ -14,11 +15,11 @@ export function CustomInput() {
 }
 
 
-function Input({name, icon}) {
+function Input({title, icon, name, onChange, value}) {
   return (
     <div className="grid gap-1">
       <label className="text-primary-Dark-grayish-cyan text-sm font-bold">
-        {name}
+        {title}
       </label>
       <div className="relative">
         <img
@@ -28,8 +29,11 @@ function Input({name, icon}) {
         />
         <input
           type="number"
+          value={value}
           name={name}
+          min='0'
           placeholder="0"
+          onChange={onChange}
           className="w-full block bg-primary-Very-light-grayish-cyan text-primary-Very-dark-cyan text-right text-lg font-bold py-2 px-3 rounded-md font-body focus:outline-none"
         />
       </div>
