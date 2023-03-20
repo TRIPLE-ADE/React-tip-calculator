@@ -67,6 +67,8 @@ function App() {
          ? setTotalAmountValue(totalAmountValue)
          : setTotalAmountValue(totalAmount);
       setInputValue(initialInputValue);
+     }else{
+      setPeopleInputError(true)
      }
   }
 
@@ -86,7 +88,7 @@ function App() {
             peopleValue={people}
             customValue={custom}
             onClick={handleTipClick}
-            setPeopleInputError={()=>setPeopleInputError(peopleInputError)}
+            setPeopleInputError={peopleInputError}
       
           />
         </section>

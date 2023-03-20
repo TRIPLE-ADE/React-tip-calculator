@@ -15,7 +15,7 @@ function Form({billValue, onChange, customValue, onClick, peopleValue, setPeople
         value={billValue}
         name="bill"
         onChange={onChange}
-        setPeopleInputError={false}
+        
       />
       <h2 className="py-2 mt-4 text-primary-Dark-grayish-cyan font-bold">
         Select Tip %
@@ -35,7 +35,7 @@ function Form({billValue, onChange, customValue, onClick, peopleValue, setPeople
           value={peopleValue}
           name="people"
           onChange={onChange}
-          setPeopleInputError={false}
+          setPeopleInputError={setPeopleInputError}
         />
       </div>
     </div>
