@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 
 export function CustomInput({onChange, value}) {
   return (
@@ -15,7 +16,7 @@ export function CustomInput({onChange, value}) {
 }
 
 
-function Input({title, icon, name, onChange, value}) {
+function Input({title, icon, name, onChange, value, setPeopleInputError}) {
   return (
     <div className="grid gap-1">
       <label className="text-primary-Dark-grayish-cyan text-sm font-bold">
@@ -31,10 +32,14 @@ function Input({title, icon, name, onChange, value}) {
           type="number"
           value={value}
           name={name}
-          min='0'
+          min="0"
           placeholder="0"
           onChange={onChange}
-          className="w-full block bg-primary-Very-light-grayish-cyan text-primary-Very-dark-cyan text-right text-lg font-bold py-2 px-3 rounded-md font-body focus:outline-none"
+          className={`w-full block bg-primary-Very-light-grayish-cyan text-primary-Very-dark-cyan text-right text-lg font-bold py-2 px-3 rounded-md font-body focus:outline-none ${
+            setPeopleInputError
+              ? "border-red-500 border-solid border-2"
+              :"border-none"
+          }`}
         />
       </div>
     </div>

@@ -6,21 +6,37 @@ import DollarIcon from '../images/icon-dollar.svg';
 import PersonIcon from '../images/icon-person.svg';
 
 
-function Form({value, onChange, customValue, onClick, peopleValue}) { 
+function Form({billValue, onChange, customValue, onClick, peopleValue, setPeopleInputError}) {
   return (
     <div>
-      <Input title="Bill" icon={DollarIcon} value={value} name='bill' onChange={onChange}/>
-      <h2 className="py-2 mt-4 text-primary-Dark-grayish-cyan font-bold">Select Tip %</h2>
+      <Input
+        title="Bill"
+        icon={DollarIcon}
+        value={billValue}
+        name="bill"
+        onChange={onChange}
+        setPeopleInputError={false}
+      />
+      <h2 className="py-2 mt-4 text-primary-Dark-grayish-cyan font-bold">
+        Select Tip %
+      </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
-        <TipButton percentValue={5} value={0.05}  onClick={onClick} />
-        <TipButton percentValue={10}  value={0.1} onClick={onClick}/>
-        <TipButton percentValue={15}  value={0.15}  onClick={onClick}/>
-        <TipButton percentValue={25}  value={0.25}  onClick={onClick}/>
-        <TipButton percentValue={50}  value={0.5}  onClick={onClick}/>
-        <CustomInput value={customValue} onChange={onChange}/>
+        <TipButton percentValue={5} value={0.05} onClick={onClick} />
+        <TipButton percentValue={10} value={0.1} onClick={onClick} />
+        <TipButton percentValue={15} value={0.15} onClick={onClick} />
+        <TipButton percentValue={25} value={0.25} onClick={onClick} />
+        <TipButton percentValue={50} value={0.5} onClick={onClick} />
+        <CustomInput value={customValue} onChange={onChange} />
       </div>
       <div>
-        <Input title="Number of People" icon={PersonIcon} value={peopleValue} name="people" onChange={onChange} />
+        <Input
+          title="Number of People"
+          icon={PersonIcon}
+          value={peopleValue}
+          name="people"
+          onChange={onChange}
+          setPeopleInputError={false}
+        />
       </div>
     </div>
   );
