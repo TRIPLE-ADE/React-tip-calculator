@@ -15,6 +15,9 @@ function Form({
   setInputError,
   setPeopleError,
   setBillError,
+  setErrorMessage,
+  setPeopleErrorMessage,
+  setBillErrorMessage,
 }) {
   return (
     <div>
@@ -26,8 +29,8 @@ function Form({
         onChange={onChange}
         setInputError={setInputError}
         setBillError={setBillError}
-
-      
+        setErrorMessage={setErrorMessage}
+        setBillErrorMessage={setBillErrorMessage}
       />
       <h2 className="py-2 mt-4 text-primary-Dark-grayish-cyan font-bold">
         Select Tip %
@@ -49,7 +52,8 @@ function Form({
           onChange={onChange}
           setInputError={setInputError}
           setPeopleError={setPeopleError}
-        
+          setErrorMessage={setErrorMessage}
+          setPeopleErrorMessage={setPeopleErrorMessage}
         />
       </div>
     </div>

@@ -11,17 +11,18 @@ function App() {
     custom:"",
   }
 
-
-
   let tipAmount;
   let totalAmount;
 
-  const [peopleInputError, setInputError] = useState(false);
+  const [inputError, setInputError] = useState(false);
   const [inputValue, setInputValue] = useState(initialInputValue);
   const [tipAmountValue, setTipAmountValue] = useState('0.00');
   const [totalAmountValue, setTotalAmountValue] = useState('0.00');
   const [peopleError, setPeopleError] = useState(false);
-  const [billError, setBillError] = useState(false)
+  const [billError, setBillError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
+  const [peopleErrorMessage, setPeopleErrorMessage] = useState(false);
+  const [billErrorMessage, setBillErrorMessage] = useState(false);
   const {bill, people, custom} = inputValue;
   
   const handleChange = e => {
@@ -55,12 +56,15 @@ function App() {
   const handleTipClick = (e) => {
     if(people === "" && bill === "") {
        setInputError(true);
+       setErrorMessage(true);
        handleResetButton();
       }else if(bill !== "" && people === ""){
-        setPeopleError(true)
+        setPeopleError(true);
+        setPeopleErrorMessage(true);
         handleResetButton();
       }else if(bill === "" && people !==""){
         setBillError(true)
+        setBillErrorMessage(true)
         handleResetButton();
       }else{
        tipAmount = (
@@ -86,9 +90,12 @@ function App() {
       setInputValue(initialInputValue);
       setTipAmountValue("0.00");
       setTotalAmountValue("0.00");
-      setBillError(peopleError);
+      setBillError(billError);
       setPeopleError(peopleError);
-      setInputError(peopleInputError);
+      setInputError(inputError);
+      setErrorMessage(errorMessage);
+      setBillErrorMessage(billErrorMessage);
+      setPeopleErrorMessage(peopleErrorMessage)
     }, 1000)
     
   }
@@ -103,9 +110,12 @@ function App() {
             peopleValue={people}
             customValue={custom}
             onClick={handleTipClick}
-            setInputError={peopleInputError}
+            setInputError={inputError}
             setPeopleError={peopleError}
             setBillError={billError}
+            setErrorMessage={errorMessage}
+            setPeopleErrorMessage={peopleErrorMessage}
+            setBillErrorMessage={billErrorMessage}
           />
         </section>
         <section className="bg-primary-Very-dark-cyan p-7 my-7 mx-7 md:ml-0 md:mr-7 rounded-xl">
