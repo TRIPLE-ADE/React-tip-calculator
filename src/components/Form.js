@@ -6,7 +6,16 @@ import DollarIcon from '../images/icon-dollar.svg';
 import PersonIcon from '../images/icon-person.svg';
 
 
-function Form({billValue, onChange, customValue, onClick, peopleValue, setPeopleInputError}) {
+function Form({
+  billValue,
+  onChange,
+  customValue,
+  onClick,
+  peopleValue,
+  setInputError,
+  setPeopleError,
+  setBillError,
+}) {
   return (
     <div>
       <Input
@@ -15,7 +24,10 @@ function Form({billValue, onChange, customValue, onClick, peopleValue, setPeople
         value={billValue}
         name="bill"
         onChange={onChange}
-        
+        setInputError={setInputError}
+        setBillError={setBillError}
+
+      
       />
       <h2 className="py-2 mt-4 text-primary-Dark-grayish-cyan font-bold">
         Select Tip %
@@ -35,7 +47,9 @@ function Form({billValue, onChange, customValue, onClick, peopleValue, setPeople
           value={peopleValue}
           name="people"
           onChange={onChange}
-          setPeopleInputError={setPeopleInputError}
+          setInputError={setInputError}
+          setPeopleError={setPeopleError}
+        
         />
       </div>
     </div>
