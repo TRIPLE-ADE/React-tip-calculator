@@ -16,7 +16,7 @@ function App() {
   let tipAmount;
   let totalAmount;
 
-  const [peopleInputError, setInputError] = useState(false);
+  const [inputError, setInputError] = useState(false);
   const [inputValue, setInputValue] = useState(initialInputValue);
   const [tipAmountValue, setTipAmountValue] = useState('0.00');
   const [totalAmountValue, setTotalAmountValue] = useState('0.00');
@@ -86,9 +86,9 @@ function App() {
       setInputValue(initialInputValue);
       setTipAmountValue("0.00");
       setTotalAmountValue("0.00");
-      setBillError(peopleError);
+      setBillError(billError);
       setPeopleError(peopleError);
-      setInputError(peopleInputError);
+      setInputError(inputError);
     }, 1000)
     
   }
@@ -103,7 +103,7 @@ function App() {
             peopleValue={people}
             customValue={custom}
             onClick={handleTipClick}
-            setInputError={peopleInputError}
+            setInputError={inputError}
             setPeopleError={peopleError}
             setBillError={billError}
           />
