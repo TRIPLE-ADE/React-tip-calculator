@@ -15,7 +15,6 @@ export function CustomInput({onChange, value}) {
   );
 }
 
-
 function Input({
   title,
   icon,
@@ -24,13 +23,32 @@ function Input({
   value,
   setInputError,
   setPeopleError,
-  setBillError
+  setBillError,
+  setErrorMessage,
+  setPeopleErrorMessage,
+  setBillErrorMessage,
 }) {
   return (
     <div className="grid gap-1">
-      <label className="text-primary-Dark-grayish-cyan text-sm font-bold">
-        {title}
-      </label>
+      <div className="flex items-center justify-between">
+        <label className="text-primary-Dark-grayish-cyan text-sm font-bold">
+          {title}
+        </label>
+        <span
+          className={`text-sm font-bold text-red-500 ${
+            setErrorMessage
+              ? "opacity-100"
+              : setPeopleErrorMessage
+              ? "opacity-100"
+              : setBillErrorMessage
+              ? "opacity-100"
+              : "opacity-0"
+          }`}
+        >
+          Can't be zero
+        </span>
+      </div>
+
       <div className="relative">
         <img
           src={icon}
